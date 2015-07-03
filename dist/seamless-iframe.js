@@ -23,6 +23,13 @@
             };
 
     if (iframeEl) {
+
+        var htmlEl = document.getElementsByTagName('html');
+
+        for (var i=0; i<htmlEl.length; i++) {
+            htmlEl[i].className += ' seamless';
+        }
+        
         /**
          * Updates the size of the iframe element with the size of the document.
          * @todo Also check for the container size.
@@ -61,15 +68,15 @@
          * Inherits <link> and <style> declarations from the parent document
          * @todo Make it configurable.
          */
-        (function inheritStyleDeclarations() {
-            var styleSheetList = parentDoc.querySelectorAll('link,style'),
-                total = styleSheetList.length,
-                i = 0;
-
-            for (i; i < total; i += 1) {
-                headEl.insertAdjacentHTML('beforeend', styleSheetList[i].outerHTML);
-            }
-        }());
+        // (function inheritStyleDeclarations() {
+        //     var styleSheetList = parentDoc.querySelectorAll('link,style'),
+        //         total = styleSheetList.length,
+        //         i = 0;
+        //
+        //     for (i; i < total; i += 1) {
+        //         headEl.insertAdjacentHTML('beforeend', styleSheetList[i].outerHTML);
+        //     }
+        // }());
 
         /**
          * Set the parent URL as base for relative anchors that no contains target=”_self”.
