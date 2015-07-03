@@ -29,7 +29,7 @@
         for (var i=0; i<htmlEl.length; i++) {
             htmlEl[i].className += ' seamless';
         }
-        
+
         /**
          * Updates the size of the iframe element with the size of the document.
          * @todo Also check for the container size.
@@ -37,16 +37,16 @@
          */
         (function fitToContent() {
             // Compare the current width of document with previous values.
-            if (docWidth !== docEl.offsetWidth) {
-                docWidth = docEl.offsetWidth;
-                // Update the iframe element size from inside
-                iframeEl.style.width = docWidth + 'px';
-                // Send to parent
-                parentWin.postMessage({
-                    'type': 'width',
-                    'value': docWidth
-                }, parentOrigin);
-            }
+            // if (docWidth !== docEl.offsetWidth) {
+            //     docWidth = docEl.offsetWidth;
+            //     // Update the iframe element size from inside
+            //     iframeEl.style.width = docWidth + 'px';
+            //     // Send to parent
+            //     parentWin.postMessage({
+            //         'type': 'width',
+            //         'value': docWidth
+            //     }, parentOrigin);
+            // }
 
             // Compare the current height of document with previous values.
             if (docHeight !== docEl.offsetHeight) {
