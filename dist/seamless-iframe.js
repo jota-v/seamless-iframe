@@ -82,9 +82,9 @@
          * Set the parent URL as base for relative anchors that no contains target=”_self”.
          * @todo Make it configurable.
          */
-        (function insertBaseElement() {
-            headEl.insertAdjacentHTML('beforeend', '<base href="' + parentWin.location.href + '" target="_parent"/>');
-        }());
+        // (function insertBaseElement() {
+        //     headEl.insertAdjacentHTML('beforeend', '<base href="' + parentWin.location.href + '" target="_parent"/>');
+        // }());
     }
 
 }(window, document));
