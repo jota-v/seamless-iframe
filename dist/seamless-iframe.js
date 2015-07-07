@@ -4,7 +4,7 @@
     // References to the parent of the current subframe
     var parentWin = win.parent,
         parentDoc = parentWin.document,
-        parentOrigin = parentWin.location.origin,
+        // parentOrigin = parentWin.location.origin,
         // The element which the window is embedded into.
         iframeEl = win.frameElement,
         docEl = doc.documentElement,
@@ -54,10 +54,10 @@
                 // Update the iframe element size from inside
                 iframeEl.style.height = docHeight + 'px';
                 // Send to parent
-                parentWin.postMessage({
-                    'type': 'height',
-                    'value': docHeight
-                }, parentOrigin);
+                // parentWin.postMessage({
+                //     'type': 'height',
+                //     'value': docHeight
+                // }, parentOrigin);
             }
 
             requestAnimationFrame(fitToContent);
